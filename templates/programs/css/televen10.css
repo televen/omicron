@@ -1,0 +1,14 @@
+.TLVN100_wrapper{height: 460px;width: 620px;background: #ff0; padding:10px; overflow:hidden}
+.center{display: table-cell;vertical-align: middle;min-height: 10em;height: 460px;width:620px}
+
+
+/** BOTONERAS **/
+.btn-holder{position: absolute;top: 380px;width: 620px;text-align: center;}
+.btn{width: 140px;height: 60px;}
+
+.salutation{position: absolute;top: 0px;top: 315px;left: 50px;display:none;}
+.salutation .bg{height:60px;background: #fff;padding: 5px;border-radius: 70px;opacity: 0.6;width: 100px;text-align: center;}
+.salutation .text{height: 60px;width: 100px;text-align: center;position: relative;top: -55px;left: 5px;}
+
+.arrow-down{width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid #fff;position:relative;top:-60px;left:45px;opacity: 0.6;}
+

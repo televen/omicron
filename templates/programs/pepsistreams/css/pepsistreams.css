@@ -1,0 +1,16 @@
+/**
+cyan rgb(62, 166, 219);
+magenta rgb(223, 33, 79);
+green rgb(34, 195, 60);
+morado rgb(91, 51, 159);
+*/
+.pepsistreams{padding:0px;height: 480px;width: 640px;}
+.pepsistreams > *{}
+.left_bar{width:165px;float:left;}
+.left_bar_component{height:152px;border-top:3px solid #fff;border-right:3px solid #fff;border-bottom:3px solid #fff;border-left:6px solid #fff;}
+.logo_holder{border-top:6px solid #fff;background:rgb(223, 33, 79);}
+.twitter_warpper{background:rgb(91, 51, 159);}
+.player_holder{border-bottom:6px solid #fff;background:rgb(34, 195, 60);}
+.content_wrapper{width:466px;height:468px;float:right; background:rgb(62, 166, 219);border-top:6px solid #fff;border-right:6px solid #fff;border-bottom:6px solid #fff;border-left:3px solid #fff;}
+.tweet{position:absolute;border-radius: 6px;opacity: 0.5;cursor:pointer;}
+
