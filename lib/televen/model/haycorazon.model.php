@@ -103,11 +103,11 @@ class haycorazon_model{
 	}
 	
 	public function getLikesCount($args){
-		print_r($args);
-		$id_competitor = $args[0]['competitor_id'];
-
+	
+		$where["id_competitor"] = MySQL::SQLValue($args[0]['competitor_id'], MySQL::SQLVALUE_NUMBER);
+		
 					 $this->sql = "SELECT sexy_results.total_votes, sexy_results.like, sexy_results.dislike FROM sexy_results ";
-		$this->sql = $this->sql . "WHERE sexy_results.id_competitor = " . $id_competitor;
+		$this->sql = $this->sql . "WHERE sexy_results.id_competitor = " . $where["id_competitor"];
 		
 		if (! $this->db->Query($this->sql)) $this->db->Kill(); // @todo no kill in production
 		
@@ -115,9 +115,10 @@ class haycorazon_model{
 			$this->db->MoveFirst();
 			while (! $this->db->EndOfSeek()) {
 				$row = $this->db->Row();
-				$this->ret = array(  'total_votes'		=> $row->total_votes,
-									 'like' 				=> $row->like,
-									 'dislike'			=> $row->dislike);
+				
+				$this->ret = array(  'total_votes'	=> $row->total_votes,
+									 'like' 		=> $row->like,
+									 'dislike'		=> $row->dislike);
 				
 			}
 		}else{
@@ -125,7 +126,17 @@ class haycorazon_model{
 								'like' 				=> 0,
 								'dislike'			=> 0);
 		}
-		//print_r($this->ret);
+		$update["like"] 		= MySQL::SQLValue($args[0]['likes'] + $this->ret["like"], MySQL::SQLVALUE_NUMBER);
+		$update["dislike"] 		= MySQL::SQLValue($args[0]['dislikes'] + $this->ret["dislike"], MySQL::SQLVALUE_NUMBER);
+		$update["total_votes"] 	= MySQL::SQLValue($update["like"] + $update["dislike"], MySQL::SQLVALUE_NUMBER);
+		
+		if (! $this->db->AutoInsertUpdate("sexy_results", $update, $where)) $this->db->Kill();
+		
+		$this->ret = array(  'total_votes'	=> $row->total_votes + $args[0]['likes'] + $args[0]['dislikes'],
+							 'like' 		=> $row->like + $args[0]['likes'],
+							 'dislike'		=> $row->dislike + $args[0]['dislikes'],
+							 'id'			=> $args[0]['competitor_id']);
+									 
 		return $this->ret;
 	}
 }

@@ -16,5 +16,5 @@
 	
 	$GLOBALS['max_number_polls']			= 5;
 	
-	$GLOBALS['sex_timer']					= 5000;
+	$GLOBALS['sex_timer']					= 10000;
 ?>

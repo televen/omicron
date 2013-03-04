@@ -278,7 +278,6 @@ class televen {
 	}
 	
 	public function getAjax($args){
-		print_r("hola ajax");
 		$controller = new controllerInterface();
 		$args = array($args);
 		$ajax = $controller->callController(strtolower($args[0]['show']), $args);

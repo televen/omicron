@@ -56,7 +56,6 @@ class haycorazon{
 	
 	/** Ajax calls */
 	public static function getSexsLikes($args){
-		print_r("hola");
 		$model = new haycorazon_model();
 		return $model->getLikesCount($args);
 	}

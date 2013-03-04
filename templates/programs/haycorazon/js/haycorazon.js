@@ -25,30 +25,12 @@ $(function(){
 	
 	$('.like').click(function(e){
 		like++;
-		$.ajax({
-			url : ajax_url,
-			data: {
-				"likes" 		: like,
-				"dislikes" 		: dislike,
-				"piece" 		: "getSexsLikes",
-				"show" 			: "HayCorazon",
-				"ajax" 			: true,
-				"competitor_id"	: $('.load_wrapper img').data('id')
-			},
-			dataType: "json",
-			error: function(xhr, status, error){
-				
-			},
-			success: function(data, status, xhr){
-				console.debug(data);
-			},
-			timeout: 1000,
-			type: 'GET', 
-			complete : function(xhr, status){
-			
-			},
-		});
-		refreshLikes();
+		saveLikes();
+	});
+	
+	$('.dislike').click(function(e){
+		dislike++;
+		saveLikes();
 	});
 	
 	$('.dislike').click(function(e){
@@ -60,9 +42,42 @@ $(function(){
 	//loadImages();
 });
 
+function saveLikes(){
+	console.debug(parseInt($('.id_holder').html()));
+	$.ajax({
+		url : ajax_url,
+		data: {
+			"likes" 		: like,
+			"dislikes" 		: dislike,
+			"piece" 		: "getSexsLikes",
+			"show" 			: "HayCorazon",
+			"ajax" 			: true,
+			"competitor_id"	: parseInt($('.id_holder').html())
+		},
+		dataType: "json",
+		error: function(xhr, status, error){
+			console.debug(xhr);
+			console.debug(status);
+			console.debug(error);
+		},
+		success: function(data, status, xhr){
+			like = data.like; dislike = data.dislike;
+			refreshLikes();
+			like = 0; dislike = 0;
+			
+		},
+		timeout: 10000,
+		type: 'GET', 
+		complete : function(xhr, status){
+		
+		},
+	});
+}
+
 function refreshLikes(){
-	$('.dislike-percentage').html(Math.floor((dislike/(like+dislike))*100) + "%");
-		$('.like-percentage').html(Math.floor((like/(like+dislike))*100) + "%");
+	total_votes = ((like + dislike) == 0) ? 1 : like + dislike;
+	$('.dislike-percentage').html(Math.floor((dislike/total_votes)*100) + "%");
+	$('.like-percentage').html(Math.floor((like/total_votes)*100) + "%");
 }
 
 function hideSalutation(){
@@ -100,7 +115,7 @@ function loadImg(){
 
     })
     .attr('src', 'templates/programs/haycorazon/assets/competitor/' + secuence + "/" + $(".load_wrapper p").data("sign") + ".jpg")
-	.attr("data-id", id);
+	$('.id_holder').html(id);
 	
 	$(".load_img").remove();
 }
@@ -142,13 +157,17 @@ function changeCompetitor(){
 	var img = new Image();
 	var secuence = (competitor.data("secuence") < 100) ? "0" + competitor.data("secuence") : competitor.data("secuence");
 
-	$('.load_wrapper img').attr('src', 'templates/programs/haycorazon/assets/competitor/' + secuence + "/" + competitor.data("sign") + ".jpg").attr('data-id', competitor.attr("id"));
+	$('.load_wrapper img').attr('src', 'templates/programs/haycorazon/assets/competitor/' + secuence + "/" + competitor.data("sign") + ".jpg");
+	$('.id_holder').html(competitor.attr("id"));
 	$('.load_wrapper p').html(competitor.data('html-safe'));
 	
 	$('.selected').removeClass('selected');
 	
 	$("#" + competitor.attr("id")).addClass('selected');
 	competitors.pop();
+	
+	like = 0; dislike = 0;
+	refreshLikes();
 	setTimeout('changeCompetitor()', timer);
 }
 
