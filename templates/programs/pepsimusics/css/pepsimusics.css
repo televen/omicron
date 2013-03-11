@@ -1,5 +1,6 @@
 /** Televen 10.0 framework */
-.photo-gallery{width:480px; height:480px;position:absolute;left:160px; top:0px;overflow:hidden;}
+.pepsimusics{background:url('../assets/bg.jpg');}
+.photo-gallery{width:480px; height:480px;position:absolute;left:160px; top:0px;}
 .photo-gallery ul{margin:0px;padding:0px}
 .photo-gallery li{margin:0px;padding:0px;float:left;list-style:none;cursor:pointer;overflow:hidden;}
 .photo-gallery li img{border:1px solid #333}

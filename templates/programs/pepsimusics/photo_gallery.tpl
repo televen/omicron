@@ -2,8 +2,10 @@
 	<div class="logo_wrapper"></div>
 	<div class="twitter-statistics"></div>
 </div>
-<div class="photo-gallery">
-	{photos}
+<div class="photo-gallery nano">	
+	<div class="nanoScroller content">	
+		{photos}
+	</div>
 </div>
 <div class="photo-holder">
 	<div class="photo-background"></div>

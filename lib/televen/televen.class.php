@@ -114,10 +114,10 @@ class televen {
 			}else{
 				$dev = 'computer';
 			}
-			if(array_key_exists($dev, $plugins_list[$piece])){
-				foreach($plugins_list[$piece][$dev] as $plugin){
-					$html = $html . '<link rel="stylesheet" type="text/css" href="' . $GLOBALS['root'] . $plugin_URI . 'css/' . $plugin . '">';
-				}
+			if(array_key_exists($piece, $GLOBALS['plugins_list'])){
+				//foreach($plugins_list[$piece][$dev] as $plugin){
+					$html = $html . '<link rel="stylesheet" type="text/css" href="' . $GLOBALS["plugin_URI"] . 'css/' . $GLOBALS['plugins_list'][$piece] . '.css">';
+				//}
 			}
 		}
 		return $html;
@@ -175,10 +175,10 @@ class televen {
 			}else{
 				$dev = 'computer';
 			}
-			if(array_key_exists($dev, $plugins_list[$piece])){
-				foreach($plugins_list[$piece][$dev] as $plugin){
-					$html = $html . '<script type="text/javascript" src="' . $GLOBALS['root'] . $plugin_URI . 'js/' . $plugin	 . '"></script>';
-				}
+			if(array_key_exists($piece, $GLOBALS["plugins_list"])){
+				///foreach($GLOBALS["plugins_list"][$piece] as $plugin){
+					$html = $html . '<script type="text/javascript" src="' . $GLOBALS['plugin_URI'] . 'js/' . $GLOBALS["plugins_list"][$piece]	 . '.js"></script>';
+				//}
 			}
 		}
 		return $html;
@@ -211,7 +211,7 @@ class televen {
 		$head['css_framework'] 		= $this->getCSSFramework();
 		$head['css'] 				= $this->getCSS($show);
 		$head['base_css'] 			= $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . 'css/televen10.css';
-		$head['plugins']			= ""; // @todo $this->getCSSPlugins($piece);
+		$head['plugins']			= $this->getCSSPlugins($piece);
 		$head['show_description'] 	= $GLOBALS['show_description'];
 		$head['show_keywords'] 		= array_merge($GLOBALS['platform_keywords'], $GLOBALS['keywords']);
 		$head['show_keywords'] 		= implode(', ', $head["show_keywords"]);

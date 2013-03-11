@@ -30,6 +30,9 @@ $(function(){
 	$('.dislike-photo').click(function(){
 	
 	});
+	
+	
+	$(".nano").nanoScroller();
 });
 
 function animatePhotoWrapperIn(img){
