@@ -1,5 +1,6 @@
 /** Televen 10.0 framework */
 var photos = new Array();
+var KEYCODE_ESC = 27;
 
 $(function(){	
 	$('.photo-gallery li').each(function(i){
@@ -31,8 +32,13 @@ $(function(){
 	
 	});
 	
-	
 	$(".nano").nanoScroller();
+	
+	$(window).keyup(function(e){
+		if(e.which == KEYCODE_ESC){
+			animatePhotoWrapperOut();
+		}
+	});
 });
 
 function animatePhotoWrapperIn(img){
