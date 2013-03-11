@@ -1,0 +1,19 @@
+por incluir en el install:
+	1) en index hay que incluir el el "load[SHOW]" dentro de las opciones del switch
+	2) a) en configuration hay que incluir el short_name del show en "showlist"
+	   b) en configuration hay que incluir el short_name del show y el nombre del show en "shows_name"
+	3) corregir en el model:
+		a) la inclusion de la clase de MYSQL debe ser include_once
+		b) en la inclusion del configuration luego de "$GLOBALS["show_URI"] . " colocar comillas dobles y quitarlas de "/configuration"
+	4) las variables a pasar deberian ser short_name y show_name
+		
+		
+Para crear:
+	1) validar los gets de las variables
+	2) Nueva interfaz para crear piezas
+		a) crear pieza a partir de url (piece_name & pice_title)
+		b) crear controller (piece_name)
+		
+Por modificar en el framwork:
+	1) validar que exista el controller (controllerInterface)
+	2) validar que exista el show (index)

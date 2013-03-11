@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<!-- PAGE TITLE -->
-	<title>{show} | {piece_title}</title>
+		<title>{show} | {piece_title}</title>
 		<!-- CSS -->
 		<link rel="stylesheet" type="text/css" href="{css_framework}">
 		<link rel="stylesheet" type="text/css" href="{base_css}">
