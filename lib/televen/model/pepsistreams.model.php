@@ -11,11 +11,12 @@ class pepsistreams_model{
 	private $ret = array();
 
 	public function __construct(){
-		$this->db = new MySQL(true, "pepsi", $GLOBALS["db_host"], $GLOBALS["db_user"], $GLOBALS["db_password"]);
-		if ($this->db->Error()) $this->db->Kill(); // @todo not this in production
+		/*$this->db = new MySQL(true, "pepsi", $GLOBALS["db_host"], $GLOBALS["db_user"], $GLOBALS["db_password"]);
+		if ($this->db->Error()) $this->db->Kill(); // @todo not this in production*/
 	}
 	
 	public function getPhotoFolderByBlack($black){
+	/*
 					 $this->sql = "SELECT photo_folder.folder FROM photo_folder ";
 		$this->sql = $this->sql . "WHERE photo_folder.black = " . $black;
 		
@@ -30,7 +31,15 @@ class pepsistreams_model{
 		}else{
 			$this->ret = array('folder' => 'n1');
 		}
-		
+	*/
+		switch($black){
+			case 0: $this->ret = array('folder' => 'n0');break;
+			case 1: $this->ret = array('folder' => 'n1');break;
+			case 2: $this->ret = array('folder' => 'n2');break;
+			case 3: $this->ret = array('folder' => 'n3');break;
+			case 4: $this->ret = array('folder' => 'n4');break;
+			default: $this->ret = array('folder' => 'n1');break;
+		}
 		return $this->ret;
 	}
 	

@@ -14,7 +14,8 @@ class pepsistreams{
 	public static function photo_gallery($args){
 		$files = array();
 		$model = new pepsistreams_model();
-		$folder = $model->getPhotoFolderByBlack($args[0]['black'])['folder'];
+		$folder = $model->getPhotoFolderByBlack($args[0]['black']);
+		$folder = $folder['folder'];
 		
 		$path = $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . "pepsistreams/assets/" . $folder;
 

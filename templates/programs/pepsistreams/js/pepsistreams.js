@@ -25,11 +25,12 @@ $(function(){
 	});
 	
 	$('.like-photo').click(function(){
-	
+		console.debug($('.photo img').data('id'));
+		_gaq.push(['_trackEvent', 'PepsiStreams', 'Like', $('.photo img').data('id')]);
 	});
 	
 	$('.dislike-photo').click(function(){
-	
+		_gaq.push(['_trackEvent', 'PepsiStreams', 'DisLike', $('.photo img').data('id')]);
 	});
 	
 	$(".nano").nanoScroller();
@@ -45,7 +46,8 @@ function animatePhotoWrapperIn(img){
 	$('.photo-holder').css({'top':'0px'});
 	$('.photo-background').animate({'top':'0px'}, 300).animate({'top':'120px'}, 150).animate({'top':'0px'}, 150).animate({'top':'60px'}, 150).animate({'top':'0px'}, 150,function(){
 		$('.photo-wrapper').animate({'top':'88px'}, 300).animate({'top':'120px'}, 150).animate({'top':'88px'}, 150).animate({'top':'60px'}, 150).animate({'top':'88px'}, 150, function(){
-			$('.photo img').attr('src', 'templates/programs/pepsistreams/assets/' + img).fadeIn("slow");
+			$('.photo img').attr('src', 'templates/programs/pepsistreams/assets/' + img).fadeIn("slow").data('id', img);
+			_gaq.push(['_trackEvent', 'PepsiStreams', 'OpenPicture', img]);
 		});
 	});
 }
