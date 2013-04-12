@@ -1,0 +1,10 @@
+.chataignCapriles{background:url('../assets/ch/Promo/bg.jpg');width: 640px;height: 480px;}
+.ballon{width:178px; height:167px;position:absolute;font-size: 11px;line-height: 11px;}
+.blue-left{background:url('../assets/ch/Promo/bl.png');left: 130px;}
+.blue-left p{width: 99px;height: 60px;margin: 36px 21px 19px 39px;}
+.blue-right{background:url('../assets/ch/Promo/br.png');left: 335px;}
+.blue-right p{width: 99px;height: 60px;margin: 36px 21px 19px 39px;}
+.red-left{background:url('../assets/ch/Promo/rl.png');top: 30px;left: 107px;}
+.red-left p{width: 99px;height: 60px;margin: 38px 21px 19px 39px;}
+.red-right{background:url('../assets/ch/Promo/rr.png');top: 33px;left: 360px;}
+.red-right p{width: 99px;height: 60px;margin: 38px 21px 19px 39px;}

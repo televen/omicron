@@ -9,7 +9,7 @@
 	
 	$GLOBALS['root'] 				= $_SERVER['DOCUMENT_ROOT'] . '/omicron/';
 	
-	$GLOBALS['show_list']			= array('vitrina', 'labomba', 'sehadicho', 'haycorazon', 'unminutoparaganar', 'pepsistreams', 'pepsimusics');
+	$GLOBALS['show_list']			= array('vitrina', 'labomba', 'sehadicho', 'haycorazon', 'unminutoparaganar', 'pepsistreams', 'pepsimusics', 'chataing');
 	
 	$GLOBALS['shows_name']			= array('vitrina' 			=> 'Vitrina en construcci&oaacute;n', 
 											'labomba' 			=> 'La Bomba',
@@ -17,7 +17,8 @@
 											'haycorazon' 		=> '&iquest;Hay Coraz&oacute;n?',
 											'unminutoparaganar' => 'Un Minuto Para Ganar',
 											'pepsistreams' 		=> 'Pepsi Streams',
-											'pepsimusics'		=> 'Pepsi Music');
+											'pepsimusics'		=> 'Pepsi Music',
+											'chataing'			=> 'Chataing');
 									
 	$GLOBALS['platform_keywords']	= array('Televen', 'Televen 10.0', 'plataforma interactiva', '#sincronizate', '#sincronízate', 'sincronizados',
 									'sincronización', '10.0', 'plataforma', 'interactiva', 'second screen', 'interactive platform');
