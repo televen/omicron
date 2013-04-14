@@ -9,7 +9,7 @@
 	
 	$GLOBALS['root'] 				= $_SERVER['DOCUMENT_ROOT'] . '/omicron/';
 	
-	$GLOBALS['show_list']			= array('vitrina', 'labomba', 'sehadicho', 'haycorazon', 'unminutoparaganar', 'pepsistreams', 'pepsimusics', 'chataing');
+	$GLOBALS['show_list']			= array('vitrina', 'labomba', 'sehadicho', 'haycorazon', 'unminutoparaganar', 'pepsistreams', 'pepsimusics', 'chataing', 'opcion2013');
 	
 	$GLOBALS['shows_name']			= array('vitrina' 			=> 'Vitrina en construcci&oaacute;n', 
 											'labomba' 			=> 'La Bomba',
@@ -18,14 +18,16 @@
 											'unminutoparaganar' => 'Un Minuto Para Ganar',
 											'pepsistreams' 		=> 'Pepsi Streams',
 											'pepsimusics'		=> 'Pepsi Music',
-											'chataing'			=> 'Chataing');
+											'chataing'			=> 'Chataing',
+											'opcion2013'		=> 'Opci&oacute;n 2013');
 									
 	$GLOBALS['platform_keywords']	= array('Televen', 'Televen 10.0', 'plataforma interactiva', '#sincronizate', '#sincronízate', 'sincronizados',
 									'sincronización', '10.0', 'plataforma', 'interactiva', 'second screen', 'interactive platform');
 	
 	$GLOBALS['css_framework_pc']	= 'bootstrap/css/bootstrap.min.css';
+	$GLOBALS['css_framework_mobile']	= 'bootstrap/css/bootstrap.min.css';
 	$GLOBALS['js_framework_pc']		= 'jquery';
-	$GLOBALS['js_framework_mobile']	= 'zepto';
+	$GLOBALS['js_framework_mobile']	= 'zepto.min.js';
 	
 	$GLOBALS['db_host']				= 'localhost';
 	$GLOBALS['db_user']				= 'root';

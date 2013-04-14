@@ -13,6 +13,7 @@ if(isset($_GET["ajax"])){
 			case "pepsistreams" : echo $televen->loadPepsiStreams($televen->convertUrlQuery($_SERVER['QUERY_STRING'])); break;
 			case "pepsimusics"	: echo $televen->loadPepsiMusics($televen->convertUrlQuery($_SERVER['QUERY_STRING'])); break;
 			case "chataing"		: echo $televen->loadChataing($televen->convertUrlQuery($_SERVER['QUERY_STRING'])); break;
+			case "opcion2013"	: echo $televen->loadOpcion2013($televen->convertUrlQuery($_SERVER['QUERY_STRING'])); break;
 			//case "ajax"			: echo json_enconde($televen->getAjax($televen->convertUrlQuery($_SERVER['QUERY_STRING']))); break;
 			default				: // @todo
 		}

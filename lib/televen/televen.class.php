@@ -88,7 +88,7 @@ class televen {
 		$html = "";
 		if($_SESSION['device']['type'] == 'phone' || $_SESSION['device']['type'] == 'tablet'){
 			if($_SESSION['device']['grade']=='A'){
-				$html = "";
+				$html = $GLOBALS['framework_URI'] . 'css/' . $GLOBALS['css_framework_mobile'];
 			}
 		}else{
 			$html = $GLOBALS['framework_URI'] . 'css/' . $GLOBALS['css_framework_pc'];
@@ -133,7 +133,7 @@ class televen {
 	*/
 	private function getCSS($show){
 		if($_SESSION['device']['type'] == 'phone' || $_SESSION['device']['type'] == 'tablet'){
-			return $GLOBALS['root'] . $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . 'css/' . $show . '.css'; //pt1
+			return $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . '/css/' . $show . '.css'; //pt1
 		}else{
 			return $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . '/css/' . $show . '.css'; //pt1
 		}	
@@ -149,9 +149,10 @@ class televen {
 		$html = "";
 		if($_SESSION['device']['type'] == 'phone' || $_SESSION['device']['type'] == 'tablet'){
 			if($_SESSION['device']['grade']=='A'){
-				$html = '<script type="text/javascript" src="' . $GLOBALS['root'] . $framework_URI . 'js/' . $js_framework_mobile . '"></script>';
+				$html = '<script type="text/javascript" src="' . $GLOBALS['framework_URI'] . 'js/' . $GLOBALS['js_framework_mobile'] . '"></script>';
 			}
 		}else{
+			//$html = '<script type="text/javascript" src="' . $GLOBALS['framework_URI'] . 'js/' . $GLOBALS['js_framework_mobile'] . '"></script>';
 			$html = '<script type="text/javascript" src="https://www.google.com/jsapi"></script><script type="text/javascript">google.load("jquery", "1");</script>';
 		}
 		return $html;
@@ -177,7 +178,7 @@ class televen {
 			}
 			if(array_key_exists($piece, $GLOBALS["plugins_list"])){
 				///foreach($GLOBALS["plugins_list"][$piece] as $plugin){
-					$html = $html . '<script type="text/javascript" src="' . $GLOBALS['plugin_URI'] . 'js/' . $GLOBALS["plugins_list"][$piece]	 . '.js"></script>';
+					$html = $html . '<script type="text/javascript" src="' . $GLOBALS['plugin_URI'] . 'js/' . $GLOBALS["plugins_list"][$piece]	 . (($dev == "computer") ? '' : '.mob') . '.js"></script>';
 				//}
 			}
 		}
@@ -186,7 +187,7 @@ class televen {
 	
 	private function getScripts($show){
 		if($_SESSION['device']['type'] == 'phone' || $_SESSION['device']['type'] == 'tablet'){
-			return $GLOBALS['root'] . $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . 'js/' . $show . '.js'; //pt1
+			return '<script type="text/javascript" src="' . $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . '/js/' . $show . '.js"></script>';
 		}else{
 			return '<script type="text/javascript" src="' . $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . '/js/' . $show . '.js"></script>';
 		}

@@ -127,13 +127,13 @@ class device {
 	private function setOS($dev){
 		if($dev->isAndroidOS()){
 			$this->device['os'] = 'android';
-			$this->device['os']['version'] = $dev->version('Android');
+			//$this->device['os']['version'] = $dev->version('Android');
 		}elseif($dev->isBlackBerryOS()){
 			$this->device['os'] = 'blackkberry';
-			$this->device['os']['version'] = $dev->version('BlackBerry');
+			//$this->device['os']['version'] = $dev->version('BlackBerry');
 		}elseif($dev->isiOS()){
 			$this->device['os'] = 'ios';
-			$this->device['os']['version'] = (($dev->version('iPhone')==0) ? (($dev->version('iPad') == 0) ? $dev->version('iPod') : $dev->version('iPad')) : $dev->version('iPhone'));
+			//$this->device['os']['version'] = (($dev->version('iPhone')==0) ? (($dev->version('iPad') == 0) ? $dev->version('iPod') : $dev->version('iPad')) : $dev->version('iPhone'));
 		}elseif($dev->isWindowsPhoneOS()){
 			$this->device['os'] = 'windowsphone';
 			$this->device['os']['version'] = $dev->version('Windows Phone OS');
