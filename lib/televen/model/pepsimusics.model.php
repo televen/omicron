@@ -16,6 +16,7 @@ class pepsimusics_model{
 	}
 	
 	public function getPhotoFolderByBlack($black){
+	/*
 					 $this->sql = "SELECT photo_folder.folder FROM photo_folder ";
 		$this->sql = $this->sql . "WHERE photo_folder.black = " . $black;
 		
@@ -30,7 +31,19 @@ class pepsimusics_model{
 		}else{
 			$this->ret = array('folder' => 'n1');
 		}
-		
+	*/
+		switch($black){
+			case 0: $this->ret = array('folder' => 'n0');break;
+			case 1: $this->ret = array('folder' => 'n1');break;
+			case 2: $this->ret = array('folder' => 'n2');break;
+			case 3: $this->ret = array('folder' => 'n3');break;
+			case 4: $this->ret = array('folder' => 'n4');break;
+			case 5: $this->ret = array('folder' => 'n5');break;
+			case 6: $this->ret = array('folder' => 'n6');break;
+			case 7: $this->ret = array('folder' => 'n7');break;
+			case 8: $this->ret = array('folder' => 'n8');break;
+			default: $this->ret = array('folder' => 'n0');break;
+		}
 		return $this->ret;
 	}
 }

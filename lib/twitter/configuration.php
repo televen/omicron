@@ -16,5 +16,5 @@
 	
 	$GLOBALS["cloud_form_file"]					= "forms/pepsi.info";
 	
-	$GLOBALS["db_table"]						= "pepsi";
+	$GLOBALS["db_table"]						= "twitter";
 ?>

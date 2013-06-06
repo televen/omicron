@@ -23,7 +23,7 @@ function hideSalutation(){
 
 function animateTweetsIn(){
 	if(tweets.length > 0){
-		tweets[tweets.length - 1].css({'top': (tweets[tweets.length - 1].data("position-y")) * 10, 'left': (tweets[tweets.length - 1].data("position-x") * 10), 'background' : tweets[tweets.length - 1].data("color")}).animate({width:'10px', height:'10px'}, 300);
+		tweets[tweets.length - 1].css({'top': ((tweets[tweets.length - 1].data("position-y")) * 10) + "px", 'left': (tweets[tweets.length - 1].data("position-x") * 10) + "px"), 'background' : tweets[tweets.length - 1].data("color")}).animate({width:'10px', height:'10px'}, 300);
 		tweets.pop();
 		setTimeout('animateTweetsIn()', 200);
 	}else{

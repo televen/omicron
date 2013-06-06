@@ -54,7 +54,37 @@ class framework{
 			$file = fopen($root . 'model/' . $show_name . '.model.php', "w+");
 			fwrite($file, $this->getModelText($show_name));
 			fclose($file);
+			
+			$index = $GLOBALS['root'] . 'index.php';
+			$file = fopen($index, "c+");
+			$data = fread($file,filesize($index));
+			$data = str_replace("/*53x*/", $this->getIndexText($show_name), $data);
+			fclose($file);
+			file_put_contents($index, $data);
+			
+			$config = $GLOBALS['root'] . 'lib/configuration.php';
+			$file = fopen($config, "c+");
+			$data = fread($file,filesize($config));
+			$data = str_replace("/*53x*/", $this->getShowListText($show_name), $data);
+			$data = str_replace("/*54x*/", $this->getShowsNameText($show_name), $data);
+			fclose($file);
+			file_put_contents($config, $data);
 		}
+	}
+	
+	private function getIndexText($show_name){
+		$return = 'case "' . $show_name . '"	: echo $televen->load' . $show_name . '($televen->convertUrlQuery($_SERVER["QUERY_STRING"])); break;';
+		$return = $return . "\n\t\t\t/*53x*/";
+		return $return;
+	}
+	
+	private function getShowsNameText($show_name){
+		return "'" . $show_name . "'		=> '" . $show_name . "',\n\t\t\t\t\t\t\t\t\t\t\t/*54x*/";
+	}
+	
+	private function getShowListText($show_name){
+		$return = "'" . $show_name . "',\n\t\t\t\t\t\t\t\t\t\t\t\t/*53x*/";
+		return $return;
 	}
 	
 	private function getControllerText($show_name){
@@ -69,8 +99,8 @@ class framework{
 	private function getModelText($show_name){
 		$return = "<?php\n\n";
 		$return .= "include \$_SERVER[\"DOCUMENT_ROOT\"] . \"/omicron/lib/configuration.php\";\n";
-		$return .= "include \$GLOBALS[\"root\"] . \"/lib/mysql/mysql.class.php\";\n";
-		$return .= "include \$GLOBALS[\"root\"] . \$GLOBALS[\"base_URI\"] . \$GLOBALS[\"show_URI\"] . " . $show_name . "\"/configuration.php\";\n\n";
+		$return .= "include_once \$GLOBALS[\"root\"] . \"/lib/mysql/mysql.class.php\";\n";
+		$return .= "include \$GLOBALS[\"root\"] . \$GLOBALS[\"base_URI\"] . \$GLOBALS[\"show_URI\"] . \"" . $show_name . "/configuration.php\";\n\n";
 		$return .= "class " . $show_name . "_model{\n\n";
 		$return .= "\tprivate \$db;\n\tprivate \$sql;\n\tprivate \$ret = array();\n\n";
 		$return .= "\tpublic function __construct(){\n";

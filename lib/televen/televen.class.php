@@ -185,11 +185,15 @@ class televen {
 		return $html;
 	}
 	
-	private function getScripts($show){
+	private function getScripts($show, $piece){
+		$html = "";
+		foreach($GLOBALS["script_list"][$piece] as $script){
+			$html = $html . '<script type="text/javascript" src="' . $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . '/js/' . $script . '"></script>';
+		}
 		if($_SESSION['device']['type'] == 'phone' || $_SESSION['device']['type'] == 'tablet'){
-			return '<script type="text/javascript" src="' . $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . '/js/' . $show . '.js"></script>';
+			return $html . '<script type="text/javascript" src="' . $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . '/js/' . $show . '.js"></script>';
 		}else{
-			return '<script type="text/javascript" src="' . $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . '/js/' . $show . '.js"></script>';
+			return $html . '<script type="text/javascript" src="' . $GLOBALS['base_URI'] . $GLOBALS['show_URI'] . $show . '/js/' . $show . '.js"></script>';
 		}
 	}
 	
@@ -221,7 +225,7 @@ class televen {
 		$foot['GA_UA']				= $GLOBALS['GA_UA'];
 		$foot['js_framework']		= $this->getJSFramework();
 		$foot['plugins']			= $this->getJSPlugins($piece);
-		$foot['scripts']			= $this->getScripts($show);
+		$foot['scripts']			= $this->getScripts($show, $piece);
 		
 		return array("head" => $head, "foot" => $foot);
 	}

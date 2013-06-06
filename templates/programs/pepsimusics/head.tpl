@@ -17,3 +17,7 @@
 	</head>
 	<body>
 		<div id="TLVN100_wrapper" class="TLVN100_wrapper {show_shortname}">
+			<div id="left_bar" class="left_bar">
+				<div class="logo_wrapper"><img src="templates/programs/pepsimusics/assets/logo.png" /></div>
+				<div class="twitter-statistics"></div>
+			</div>
