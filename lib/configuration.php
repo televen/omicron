@@ -21,6 +21,9 @@
 												'andresaragon',
 												'notfound',
 												'games',
+												'elavispero',
+												'taspillao',
+												'detrasdecamaras',
 												/*53x*/
 												);
 	
@@ -36,6 +39,9 @@
 											'andresaragon'		=> 'Nerio Camargo',
 											'notfound'			=> 'No encontrado',
 											'games'				=> 'Juegos 10.0',
+											'elavispero'		=> 'El Avispero',
+											'taspillao'			=> 'Tas Pillao',
+											'detrasdecamaras'		=> 'Detr&aacute;s De Las C&aacute;maras',
 											/*54x*/
 											);
 									

@@ -1,0 +1,9 @@
+/** Televen 10.0 framework */
+.whattohave{background:url('../assets/bg.png');width: 640px;height: 480px;position: absolute;top: 0;left: 0;}
+.question_text{position: absolute;top: 270px;left: 15px;}
+.question_text textarea{width: 582px;height: 150px;border: 2px solid #d41b24;box-shadow: 0px 0px 10px #000;}
+.btn-detrasdecamaras{background: url('../assets/btn.png') no-repeat;width: 200px;height: 65px;margin-left: 260px;cursor:pointer;}
+.btn-detrasdecamaras:hover{background: url('../assets/btn-hover.png') no-repeat;}
+.whattohave > .message{z-index: 6;display:none;background: #000;color: #fff;position: absolute;width: 300px;max-height: 220px;min-height: 100px;text-align: center;border-radius: 5px;opacity: 0.6;padding: 10px;top: 120px;left: 160px;}
+.whattohave > .message > .close{color: #fff;}
+.luis{width: 226px;height: 314px;position: absolute;top: -260px;left: 375px;z-index: 5;background: url('../assets/1.png');}

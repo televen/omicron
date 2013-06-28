@@ -45,6 +45,11 @@ class  controllerInterface{
 		return call_user_func($show . '::' . $args[0]['piece'], $args);
 	}
 	
+	public function callControllerAjax($show, $action, $args){
+		include 'controllers/' . $show . '.controller.php';
+		return call_user_func($show . '::' . $action, $args);
+	}
+	
 }
 
 ?>

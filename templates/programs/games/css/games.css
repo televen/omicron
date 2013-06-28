@@ -1,1 +1,38 @@
 /** Televen 10.0 framework */
+
+/* SIMON SAYS */
+@font-face {
+    font-family: 'SimonSays';
+    src: url('../fonts/aardc__-webfont.eot');
+    src: url('../fonts/aardc__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/aardc__-webfont.woff') format('woff'),
+         url('../fonts/aardc__-webfont.ttf') format('truetype'),
+         url('../fonts/aardc__-webfont.svg#aardvark_caferegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.simon_says{background:url('../assets/ss/bg.jpg');width:640px;height:480px;position:absolute;top:0px;left:0px;font-family:SimonSays}
+.simon_says > div{position:absolute;cursor:pointer;}
+.c1, .c2, .c3, .c4{display:none;}
+.simon_says > .yellow, .simon_says > .yellow_g{top: 211px;left: 306px;}
+.simon_says > .red, .simon_says > .red_g{top: 73px;left: 169px;}
+.simon_says > .blue, .simon_says > .blue_g{top: 212px;left: 167px;}
+.simon_says > .green, .simon_says > .green_g{top: 72px;left: 306px;}
+.simon_says > .score{display:none;position: absolute;color: #fff;top: 200px;left: 309px;}
+.simon_says > .score > .points{font-size: 40px;position: relative;left: -15px;text-align: center;width: 55px;}
+.loader{
+z-index:3;
+width: 640px;
+height: 480px;/* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: -moz-radial-gradient(center, ellipse cover, rgba(82,82,82,1) 0%, rgba(100,100,100,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(82,82,82,1)), color-stop(100%,rgba(100,100,100,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(82,82,82,1) 0%,rgba(100,100,100,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover, rgba(82,82,82,1) 0%,rgba(100,100,100,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover, rgba(82,82,82,1) 0%,rgba(100,100,100,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center, rgba(82,82,82,1) 0%,rgba(100,100,100,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#525252', endColorstr='#646464',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */}
+.play{position: absolute;color: #fff;font-size: 20px;top: 220px;left: 302px;z-index:2}
+.loader_sq{position: relative;left: 215px;top: -13px;}
+.loader_sq li{list-style: none;background: #fff;height: 5px;width: 5px;margin: 5px;float: left;box-shadow:0px 0px 5px #222; border-radius:5px}
+.loader > p{margin: 195px 290px 0px;color: #7c7c7c;}
