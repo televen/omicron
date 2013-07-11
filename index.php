@@ -18,6 +18,9 @@ if(isset($_GET["ajax"])){
 		case "elavispero"		: echo $televen->loadelavispero($televen->convertUrlQuery($_SERVER["QUERY_STRING"])); break;
 		case "taspillao"		: echo $televen->loadtaspillao($televen->convertUrlQuery($_SERVER["QUERY_STRING"])); break;
 		case "detrasdecamaras"	: echo $televen->loaddetrasdecamaras($televen->convertUrlQuery($_SERVER["QUERY_STRING"])); break;
+		case "sehadicho"		: echo $televen->loadsehadicho($televen->convertUrlQuery($_SERVER["QUERY_STRING"])); break;
+		case "unminutoparaganar": echo $televen->loadunminutoparaganar($televen->convertUrlQuery($_SERVER["QUERY_STRING"])); break;
+		case "tutorials"	: echo $televen->loadtutorials($televen->convertUrlQuery($_SERVER["QUERY_STRING"])); break;
 			/*53x*/
 		default				: echo $televen->loadnotfound($televen->convertUrlQuery("show=notfound&piece=notfounds")); break;
 	}

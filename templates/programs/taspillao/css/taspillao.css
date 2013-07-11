@@ -1,8 +1,40 @@
 /** Televen 10.0 framework */
 .whattohave{background:url('../assets/bg.jpg');width: 640px;height: 480px;position: absolute;top: 0;left: 0;}
+.manual, .joke, .piropo{background:url('../assets/bg3.jpg');width: 640px;height: 480px;position: absolute;top: 0;left: 0;}
+
 .question_text{position: absolute;top: 215px;left: 15px;}
 .question_text textarea{width: 595px;height: 150px;opacity:0.9;}
 .btn-taspillao{background: url('../assets/btn.png') no-repeat;width: 200px;height: 65px;margin-left: 410px;cursor:pointer;}
 .btn-taspillao:hover{background: url('../assets/btn-hover.png') no-repeat;}
-.whattohave > .message{display:none;background: #000;color: #fff;position: absolute;width: 300px;max-height: 220px;min-height: 100px;text-align: center;border-radius: 5px;opacity: 0.6;padding: 10px;top: 120px;left: 160px;}
-.whattohave > .message > .close{color: #fff;}
+.message{display:none;background: #000;color: #fff;position: absolute;width: 300px;max-height: 220px;min-height: 100px;text-align: center;border-radius: 5px;opacity: 0.6;padding: 10px;top: 120px;left: 160px;}
+.message > .close{color: #fff;}
+
+.number{background: url('../assets/numbers.png') no-repeat;height: 46px;position: relative;top: -20px;}
+.identifier{background: url('../assets/icons.png') no-repeat;width: 39px;height: 35px;position: relative;top: -5px;}
+.one{background-position: 0px 0px;width: 43px;}
+.two{background-position: -43px 0px;width: 30px;}
+.three{background-position: -78px 0px;width: 30px;}
+.manual li{background: #fff;border-radius: 5px;width: 200px;height: 90px;margin: 20px;list-style: none;float: left;}
+.pare .explanation{position: relative;top: -43px;left: -105px;width: 300px;}
+.impare .explanation{position: relative;top: -45px;left: 7px;width: 187px;}
+.pare .number{left: 170px;}
+.impare .number{left: 0px;}
+.pare .character, .pare .identifier{float:left;left: 20px;}
+.impare .character, .impare .identifier{float:right;left: -25px;}
+.pare .wrapper-character{position: relative;top: -40px;left: -85px;}
+.impare .wrapper-character{position: relative;top: -120px;left: 85px;}
+
+.joke .title{margin-top:10px;text-align: center;}
+.joke .text-holder{margin-top: 20px;margin-left: 15px;}
+.joke .text-holder > textarea{width: 590px;height: 165px;border: 4px solid #1fd903;}
+.joke .send-joke{background: url('../assets/btn.png') no-repeat;width: 200px;height: 65px;margin-left: 210px;cursor: pointer;}
+.joke .send-joke:hover{background: url('../assets/btn-hover.png') no-repeat;}
+.jokes{width:10000px;overflow:hidden;position:relative;}
+.joke-wrapper{width:640px;float:left;}
+
+.piropo > .like{background: url('../assets/btn-mg.png') no-repeat;width: 200px;height: 65px;margin-left: 210px;cursor: pointer;margin-top: 110px;}
+.piropo img{margin-top:155px}
+.piropo > .like:hover{background: url('../assets/btn-mg-hover.png') no-repeat;}
+.piropos-wrapper{width:10000px; overflow:hidden;}
+.piropos-wrapper .text{float:left}
+.piropos{position:relative}

@@ -24,6 +24,9 @@
 												'elavispero',
 												'taspillao',
 												'detrasdecamaras',
+												'sehadicho',
+												'unminutoparaganar',
+												'tutorials',
 												/*53x*/
 												);
 	
@@ -41,7 +44,10 @@
 											'games'				=> 'Juegos 10.0',
 											'elavispero'		=> 'El Avispero',
 											'taspillao'			=> 'Tas Pillao',
-											'detrasdecamaras'		=> 'Detr&aacute;s De Las C&aacute;maras',
+											'detrasdecamaras'	=> 'Detr&aacute;s De Las C&aacute;maras',
+											'sehadicho'			=> 'Se Ha Dicho',
+											'unminutoparaganar'	=> 'Un Minuto Para Ganar',
+											'tutorials'			=> 'Tutoriales',
 											/*54x*/
 											);
 									
