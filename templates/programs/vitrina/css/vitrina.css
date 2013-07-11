@@ -1,0 +1,12 @@
+/** Televen 10.0 framework */
+.countdown{background:url('../assets/bg.jpg');width:640px;height:480px;position:absolute;top:0;left:0}
+.countdown_holder{position: absolute;top: 315px;left: 50px;}
+.hasCountdown {border: 1px solid #ccc;background-color: #eee;width: 190px;height: 45px;}
+.countdown_rtl {direction: rtl;}
+.countdown_holding span {color: #888;}
+.countdown_row {clear: both;width: 100%;padding: 0px 2px;text-align: center;}
+.countdown_show3 .countdown_section {width:93px;}
+.countdown_show3 .countdown_section:first-child {display:none;}
+.countdown_section {display: block;float: left;font-size: 75%;text-align: center;}
+.countdown_amount {font-size: 200%;}
+.countdown_descr {display: block;width: 100%;}

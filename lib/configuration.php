@@ -27,6 +27,8 @@
 												'sehadicho',
 												'unminutoparaganar',
 												'tutorials',
+												'labomba',
+												'vitrina',
 												/*53x*/
 												);
 	
@@ -48,6 +50,8 @@
 											'sehadicho'			=> 'Se Ha Dicho',
 											'unminutoparaganar'	=> 'Un Minuto Para Ganar',
 											'tutorials'			=> 'Tutoriales',
+											'labomba'			=> 'La Bomba',
+											'vitrina'			=> 'Vitrina',
 											/*54x*/
 											);
 									
