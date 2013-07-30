@@ -1,1 +1,14 @@
 /** Televen 10.0 framework */
+.shd{background:url('../assets/bg.jpg');width:640px;height:480px;position:absolute;top:0;left:0}
+.shd .form_wrapper{position:relative;background: #ccc;width: 540px;padding: 15px;margin: 80px 33px;box-shadow: 0px 0px 10px #000;border: 1px solid #333;border-radius: 10px;}
+.shd .form-horizontal .control-label{width: 100px;}
+.shd .form-horizontal .controls {margin-left: 120px;}
+.shd .form-horizontal .case_info .controls{margin-left:0px}
+.shd .help-inline{font-size:10px}
+.shd .btn{position: relative;left: 260px;height: 25px;}
+.shd .title{color: #fff;font-weight: bold;font-size: 30px;line-height: 40px;text-align: center;color:#333;margin-bottom: 10px;}
+.two{top: -417px;left: 630px;}
+.three{top: -832px;left: 630px;}
+.four{top: -1111px;left: 630px;}
+.shd textarea{width: 526px;height: 140px;}
+.shd .end-btn{left: 190px;}
