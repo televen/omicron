@@ -29,10 +29,11 @@
 												'tutorials',
 												'labomba',
 												'vitrina',
+												'premiostumundo',
 												/*53x*/
 												);
 	
-	$GLOBALS['shows_name']				= array('vitrina' 			=> 'Vitrina en construcci&oaacute;n', 
+	$GLOBALS['shows_name']				= array('vitrina' 		=> 'Vitrina en construcci&oaacute;n', 
 											'labomba' 			=> 'La Bomba',
 											'sehadicho' 		=> 'Se Ha Dicho',
 											'haycorazon' 		=> '&iquest;Hay Coraz&oacute;n?',
@@ -52,6 +53,7 @@
 											'tutorials'			=> 'Tutoriales',
 											'labomba'			=> 'La Bomba',
 											'vitrina'			=> 'Vitrina',
+											'premiostumundo'	=> 'Premios Tu Mundo',
 											/*54x*/
 											);
 									

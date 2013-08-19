@@ -1,0 +1,41 @@
+/** Televen 10.0 framework */
+.premiostumundo_wrapper{width:640px;height:480px;position:absolute;top:0;left:0}
+.premiostumundo .bg{background:url('../assets/bc-bg.png');width:640px;height:480px;position:absolute;top:0;left:0}
+.premiostumundo .show{background:url('../assets/bg1.jpg');width:640px;height:480px;position:absolute;top:0;left:0}
+.premiostumundo .picture{width: 220px;position: relative;left: 370px;top: 50px;}
+.premiostumundo .names{position: absolute;top: 200px;left: 390px;font-weight:bold;width: 193px;text-align: center;}
+.premiostumundo_wrapper .titles{position: absolute;top: 392px;left:105px;color: #fff;font-weight: bold;font-size: 31px;text-transform:uppercase}
+.premiostumundo .btn{width: 90px;height: 20px;}
+.premiostumundo .btn-group{position: absolute;top: 350px;left: 160px;}
+.premiostumundo .bar{position: absolute;top: 470px;width: 640px;border-bottom: 10px solid #ff0;text-align: right;color: #fff;}
+.premiostumundo .show p{font-size: 30px;color: #fff;font-weight: bold;text-transform: uppercase;line-height: 35px;text-align: center;margin-top: 180px;}
+.premiostumundo .show .btns{margin-left: 130px;}
+.premiostumundo .show a{position:relative;left:-1000px}
+
+.premiostumundo .nominees{background: url('../assets/bg.jpg');width: 620px;height: 410px;position: absolute;top: 0;padding: 70px 0px 0px 20px;left: 0;}
+.premiostumundo .nominee{width:157px; margin-right:50px; margin-bottom:-20px; float:left;cursor:pointer}
+.premiostumundo .photo_title{position: relative;top: -157px;background: #000;color: #fff;opacity: 0.5;}
+.premiostumundo .percentage{position: absolute;font-size: 100px;color: #fff;font-weight: bold;top: 312px;width: 315px;text-align: right;display:none;}
+.premiostumundo .nominee .grayscale{
+-webkit-filter: grayscale(1);
+-webkit-filter: grayscale(100%); -moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%); -o-filter: grayscale(100%);
+filter: url(desaturate.svg#greyscale);
+filter: gray; 
+filter: grayscale(100%);
+}
+.premiostumundo .nominee .grayscale:hover{
+-webkit-filter: grayscale(0);
+-webkit-filter: grayscale(0);
+ -moz-filter: grayscale(0);
+-ms-filter: grayscale(0); 
+-o-filter: grayscale(0);
+filter: none; 
+filter: grayscale(0);
+}
+.premiostumundo .colorshift{
+-webkit-transition: 0.5s all ease-in; -o-transition: 0.5s all ease-in;
+-moz-transition: 0.5s all ease-in; transition: 0.5s all ease-in;
+transition: 0.5s all ease-in; transition: 0.5s all ease-in;
+}
+.premiostumundo .title{position: absolute;top: 190px;left: 390px;color: #fff;font-weight: bold;font-size: 31px;text-transform: uppercase;line-height: 30px;text-align: right;margin-right: 10px;}
