@@ -11,9 +11,15 @@ class labomba_model{
 	private $ret = array();
 
 	public function __construct(){
-		$this->db = new MySQL(true, "labomba", $GLOBALS["db_host"], $GLOBALS["db_user"], $GLOBALS["db_password"]);
-		if ($this->db->Error()) $this->db->Kill(); // @todo not this in production
+		/*$this->db = new MySQL(true, "labomba", $GLOBALS["db_host"], $GLOBALS["db_user"], $GLOBALS["db_password"]);
+		if ($this->db->Error()) $this->db->Kill(); // @todo not this in production*/
 	}
+	
+	public function getPhotoFolderByBlack(){
+		return date("dmY");
+	}
+	
+	
 }
 
 ?>

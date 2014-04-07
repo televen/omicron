@@ -145,6 +145,7 @@ function loadCategories(){
 			names = item.nominees;
 			$.each(item.pictures, function(i, item){
 				html = html + '<li data-id="'+ item +'"><a href="#"><img src="templates/programs/pepsimusics/assets/bios/' + item + '.jpg" alt="' + names[i] + '"><h4>' + names[i] + '</h4></a><span class="like_tendency" data-id="'+ item +'"><img src="templates/programs/pepsimusics/assets/like.png" width="100" /></span></li>'
+				html = html + '<li data-id="'+ item +'"><a href="#"><img src="templates/programs/pepsimusics/assets/bios/' + item + '.jpg" alt="' + names[i] + '"><h4>' + names[i] + '</h4></a><span class="like_tendency" data-id="'+ item +'"><img src="templates/programs/pepsimusics/assets/like.png" width="100" /></span></li>'
 			});
 			html = html + "</ul></div>";
 			html2 = html2 + '<a href="#" data-category="' + (i-1) + '">' + item.title + '</a>';
